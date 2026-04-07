@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  com.dsoles.ar-chaser.plist
+  macOS launchd job: runs ar_chaser.py daily at 9:00 AM local time.
+
+  Install:
+    1. Edit WorkingDirectory and ProgramArguments paths below to match your setup.
+    2. cp launchd/com.dsoles.ar-chaser.plist ~/Library/LaunchAgents/
+    3. launchctl load ~/Library/LaunchAgents/com.dsoles.ar-chaser.plist
+
+  Uninstall:
+    launchctl unload ~/Library/LaunchAgents/com.dsoles.ar-chaser.plist
+    rm ~/Library/LaunchAgents/com.dsoles.ar-chaser.plist
+-->
+<plist version="1.0">
+<dict>
+  <!-- Unique label for this launchd job -->
+  <key>Label</key>
+  <string>com.dsoles.ar-chaser</string>
+
+  <!-- Command to run: python3 ar_chaser.py -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/YOUR_USERNAME/path/to/accounts-receivable-chaser/ar_chaser.py</string>
+  </array>
+
+  <!-- Working directory (must contain .env and data/) -->
+  <key>WorkingDirectory</key>
+  <string>/Users/YOUR_USERNAME/path/to/accounts-receivable-chaser</string>
+
+  <!-- Run daily at 9:00 AM -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <!-- Log stdout and stderr -->
+  <key>StandardOutPath</key>
+  <string>/Users/YOUR_USERNAME/path/to/accounts-receivable-chaser/ar_chaser.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOUR_USERNAME/path/to/accounts-receivable-chaser/ar_chaser.log</string>
+
+  <!-- Run even if the scheduled time was missed (e.g., machine was asleep) -->
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

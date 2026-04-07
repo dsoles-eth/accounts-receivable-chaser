@@ -1,0 +1,82 @@
+<!-- subject: Follow-Up: Invoice #{invoice_id} — Payment Overdue -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Follow-Up</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: Arial, Helvetica, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f5f5; padding: 30px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color: #E8A020; padding: 30px 40px;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 600;">
+                {your_company}
+              </h1>
+              <p style="margin: 4px 0 0; color: #fff3d0; font-size: 14px;">Payment Follow-Up</p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 16px; font-size: 16px; color: #333;">Dear {client_name},</p>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #555; line-height: 1.6;">
+                We're reaching out because we haven't received payment for
+                <strong>Invoice #{invoice_id}</strong> totaling <strong>${amount}</strong>,
+                which was due on <strong>{due_date}</strong> — now <strong>{days_overdue} days overdue</strong>.
+              </p>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #555; line-height: 1.6;">
+                We value our relationship with you and would appreciate your prompt attention
+                to this matter. Please arrange payment at your earliest convenience, or contact
+                us to discuss payment arrangements that work for you.
+              </p>
+
+              <!-- Invoice Summary Box -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #fffbf2; border-left: 4px solid #E8A020; border-radius: 4px; margin: 24px 0;">
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 0.5px;">Outstanding Invoice</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #333;"><strong>Invoice #:</strong> {invoice_id}</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #333;"><strong>Amount Due:</strong> ${amount}</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #333;"><strong>Original Due Date:</strong> {due_date}</p>
+                    <p style="margin: 0; font-size: 15px; color: #cc7700;"><strong>Days Overdue:</strong> {days_overdue}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #555; line-height: 1.6;">
+                If you believe this is an error or payment has already been sent, please
+                let us know right away so we can update our records.
+              </p>
+
+              <p style="margin: 0; font-size: 15px; color: #333;">
+                Best regards,<br>
+                <strong>{your_name}</strong><br>
+                <span style="color: #888;">{your_company}</span>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f8f9fa; padding: 20px 40px; border-top: 1px solid #eee;">
+              <p style="margin: 0; font-size: 12px; color: #aaa; text-align: center;">
+                This is an automated reminder from {your_company}.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

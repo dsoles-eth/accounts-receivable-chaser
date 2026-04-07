@@ -1,0 +1,6 @@
+.env
+*.log
+data/invoices.csv
+data/sent_log.json
+__pycache__/
+*.pyc

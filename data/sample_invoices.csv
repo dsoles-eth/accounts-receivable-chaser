@@ -1,0 +1,6 @@
+invoice_id,client_name,client_email,amount,due_date,status
+INV-001,Acme Corporation,billing@acmecorp.example,4500.00,2026-03-01,unpaid
+INV-002,Globex Systems,accounts@globex.example,1250.00,2026-03-15,unpaid
+INV-003,Initech LLC,finance@initech.example,8750.50,2026-02-01,unpaid
+INV-004,Umbrella Corp,ap@umbrella.example,350.00,2026-03-28,unpaid
+INV-005,Wayne Enterprises,billing@wayne.example,22000.00,2026-01-15,unpaid

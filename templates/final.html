@@ -1,0 +1,86 @@
+<!-- subject: FINAL NOTICE: Invoice #{invoice_id} — Collections Action Pending -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Notice</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: Arial, Helvetica, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f5f5; padding: 30px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color: #1a1a1a; padding: 30px 40px;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 600;">
+                {your_company}
+              </h1>
+              <p style="margin: 4px 0 0; color: #ff6b6b; font-size: 14px; font-weight: bold;">🚨 FINAL NOTICE — Collections Pending</p>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 16px; font-size: 16px; color: #333;">Dear {client_name},</p>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #333; line-height: 1.6; font-weight: bold;">
+                This is your final notice.
+              </p>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #555; line-height: 1.6;">
+                Invoice <strong>#{invoice_id}</strong> for <strong>${amount}</strong> is now
+                <strong>{days_overdue} days overdue</strong> (original due date: {due_date}).
+                This account is severely past due and has not been resolved despite multiple notices.
+              </p>
+
+              <!-- Invoice Summary Box -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #fff0f0; border: 2px solid #cc0000; border-radius: 4px; margin: 24px 0;">
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <p style="margin: 0 0 8px; font-size: 13px; color: #cc0000; text-transform: uppercase; letter-spacing: 0.5px; font-weight: bold;">⚠ Final Notice — Action Required</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #333;"><strong>Invoice #:</strong> {invoice_id}</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #333;"><strong>Amount Due:</strong> ${amount}</p>
+                    <p style="margin: 0 0 4px; font-size: 15px; color: #333;"><strong>Original Due Date:</strong> {due_date}</p>
+                    <p style="margin: 0; font-size: 16px; color: #cc0000; font-weight: bold;"><strong>Days Overdue:</strong> {days_overdue}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #555; line-height: 1.6;">
+                If we do not receive full payment or a confirmed payment arrangement within
+                <strong>5 business days</strong>, we will be forced to refer this matter to a
+                collections agency. This may significantly impact your credit standing and result
+                in additional fees.
+              </p>
+
+              <p style="margin: 0 0 16px; font-size: 15px; color: #555; line-height: 1.6;">
+                To avoid this outcome, please contact us immediately so we can resolve this matter.
+              </p>
+
+              <p style="margin: 0; font-size: 15px; color: #333;">
+                Regards,<br>
+                <strong>{your_name}</strong><br>
+                <span style="color: #888;">{your_company}</span>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #1a1a1a; padding: 20px 40px;">
+              <p style="margin: 0; font-size: 12px; color: #888; text-align: center;">
+                This is an automated final notice from {your_company}.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
